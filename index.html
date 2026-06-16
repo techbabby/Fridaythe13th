@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crystal Lake: The Legend — Exported from UXMagic Copilot">
+    <title>Crystal Lake: The Legend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Poppins:wght@100..900&amp;family=Fira+Code:wght@300..700&amp;family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+      @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root { --card: #0a1412;
+        --radius: 0.125rem;
+        --secondary: #0f172a;
+        --primary: #991b1b;
+        --border: #14241e;
+        --ring: #991b1b;
+        --background: #050a0a;
+        --foreground: #e2e8f0; }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div data-page="crystal-lake-the-legend">
+
+<div class="min-h-screen w-full bg-background text-foreground font-sans selection:bg-primary selection:text-white overflow-hidden relative" id="horror-master-root">
+  
+  <!-- PERSISTENT ATMOSPHERIC LAYERS -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <!-- Background States -->
+    <div id="bg-origin-1" class="absolute inset-0 transition-opacity duration-1500 opacity-100">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/jason-mask-woods-1781440793248-q02jx0d13v.png" class="w-full h-full object-cover brightness-[0.2] contrast-125 saturate-[0.5]" alt="1957">
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40"></div>
+    </div>
+    <div id="bg-origin-2" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/img-origin-mother-1781606898746-ns8wmoodzbi.png" class="w-full h-full object-cover brightness-[0.15] contrast-150" alt="The Mother">
+    </div>
+    <div id="bg-origin-3" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/img-origin-mask-1781606905344-w7vbu94hv3l.png" class="w-full h-full object-cover brightness-[0.2] contrast-125" alt="The Legacy">
+    </div>
+
+    <!-- Main Game Backgrounds -->
+    <div id="bg-arrival" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/teenagers-arrival-1781441008273-ms1ipm3ga8k.png" class="w-full h-full object-cover scale-105 brightness-[0.25] contrast-125" alt="The Arrival">
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+    </div>
+    <div id="bg-gateway" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/jason-mask-woods-1781440793248-q02jx0d13v.png" class="w-full h-full object-cover scale-105 brightness-[0.15] contrast-125" alt="Camp Gateway">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background"></div>
+    </div>
+    <div id="bg-pursuit" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/jason-pursuit-woods-1781441780686-6ohr255y6ip.png" class="w-full h-full object-cover scale-105 brightness-[0.2] contrast-125" alt="The Pursuit">
+    </div>
+    <div id="bg-fight" class="absolute inset-0 transition-opacity duration-1500 opacity-0">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/jason-industrial-fight-1781558069617-jxb9pdggxq.png" class="w-full h-full object-cover scale-110 brightness-[0.35] contrast-150 saturate-[0.8]" alt="The Fight">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(153,27,27,0.15)_0%,transparent_70%)] animate-pulse"></div>
+    </div>
+    <div id="bg-elimination" class="absolute inset-0 transition-opacity duration-1500 opacity-0 bg-black">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/jason-industrial-fight-1781558069617-jxb9pdggxq.png" class="w-full h-full object-cover scale-125 brightness-[0.05] contrast-200 saturate-0 blur-md" alt="Eliminated">
+    </div>
+
+    <!-- Persistent Overlays -->
+    <div id="flashlight-overlay" class="absolute inset-0 opacity-0 transition-opacity duration-300" style="background: radial-gradient(circle 280px at var(--x, 50%) var(--y, 50%), transparent 0%, rgba(0,0,0,0.99) 100%);"></div>
+    <div class="absolute inset-0 opacity-25 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_4px,3px_100%]"></div>
+  </div>
+
+  <!-- ATMOSPHERIC PARTICLES -->
+  <canvas id="fog-canvas" class="absolute inset-0 z-10 pointer-events-none opacity-50"></canvas>
+
+  <!-- PERSISTENT HUD -->
+  <div class="fixed top-8 left-8 z-[100] flex flex-col gap-1 pointer-events-none opacity-60">
+    <div class="flex items-center gap-2">
+      <div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+      <span class="text-[9px] uppercase tracking-[0.4em] font-black text-primary">Live Feed: Crystal Lake</span>
+    </div>
+    <span id="current-timestamp" class="text-[8px] font-mono text-muted-foreground/50">06/13/1980 22:42:12</span>
+  </div>
+
+  <div class="fixed top-8 right-8 z-[100] flex flex-col items-end gap-6">
+    <div class="flex flex-col items-center gap-2 group pointer-events-auto">
+      <button id="flashlight-toggle" class="w-12 h-12 flex items-center justify-center rounded-full border border-primary/40 bg-background/60 backdrop-blur-md hover:border-primary transition-all duration-300">
+        <iconify-icon icon="lucide:zap" id="flashlight-icon" class="text-lg text-primary"></iconify-icon>
+      </button>
+      <span class="text-[8px] uppercase tracking-[0.4em] font-bold text-primary/70">Light</span>
+    </div>
+    <div class="flex flex-col items-center gap-2 group pointer-events-auto">
+      <button id="audio-toggle" class="w-12 h-12 flex items-center justify-center rounded-full border border-primary/20 bg-background/60 backdrop-blur-md hover:border-primary transition-all duration-300 relative overflow-hidden">
+        <iconify-icon icon="lucide:volume-2" id="audio-icon" class="text-lg text-muted-foreground group-hover:text-primary"></iconify-icon>
+        <div id="audio-pulse" class="absolute inset-0 bg-primary/20 scale-0 rounded-full"></div>
+      </button>
+      <span class="text-[8px] uppercase tracking-[0.4em] font-bold text-muted-foreground/50 group-hover:text-primary/70">Sound</span>
+    </div>
+  </div>
+
+  <!-- AUDIO SOURCE -->
+  <audio id="horror-ambient" loop="">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- MAIN SCENE CONTAINER -->
+  <div id="scene-master" class="relative z-20 h-screen overflow-hidden">
+    
+    <!-- STAGE 0: THE ORIGIN -->
+    <div id="view-origin" class="h-full w-full flex flex-col items-center justify-center px-6 relative transition-opacity duration-1000">
+      <div id="origin-step-1" class="max-w-4xl text-center space-y-8 transition-all duration-1000">
+        <div class="flex items-center justify-center gap-4 opacity-60">
+          <span class="text-primary text-[10px] uppercase tracking-[1em] font-black">Archive 05-1957</span>
+        </div>
+        <h2 class="text-5xl md:text-8xl font-heading font-black tracking-tighter uppercase italic text-primary drop-shadow-[0_0_30px_rgba(153,27,27,0.6)]">
+          The Boy in the Lake
+        </h2>
+        <p class="text-muted-foreground text-lg md:text-2xl font-light tracking-widest leading-relaxed italic max-w-2xl mx-auto">
+          "He wasn't a very good swimmer... and the counselors weren't paying attention."
+        </p>
+        <div class="pt-16">
+          <button onclick="nextOriginStep(2)" class="group flex flex-col items-center gap-4 mx-auto cursor-pointer">
+            <span class="text-[9px] uppercase tracking-[0.8em] group-hover:text-primary transition-colors">Continue the Memory</span>
+            <iconify-icon icon="lucide:chevron-down" class="text-2xl animate-bounce text-primary/60"></iconify-icon>
+          </button>
+        </div>
+      </div>
+      <div id="origin-step-2" class="max-w-4xl text-center space-y-8 hidden opacity-0 transition-all duration-1000">
+        <div class="flex items-center justify-center gap-4 opacity-60">
+          <span class="text-primary text-[10px] uppercase tracking-[1em] font-black">The Catalyst</span>
+        </div>
+        <h2 class="text-5xl md:text-8xl font-heading font-black tracking-tighter uppercase italic text-primary drop-shadow-[0_0_30px_rgba(153,27,27,0.6)]">
+          A Mother's Love
+        </h2>
+        <p class="text-muted-foreground text-lg md:text-2xl font-light tracking-widest leading-relaxed italic max-w-2xl mx-auto">
+          "Kill her, Mommy... kill them all. Don't let them forget what they did to me."
+        </p>
+        <div class="pt-16">
+          <button onclick="nextOriginStep(3)" class="group flex flex-col items-center gap-4 mx-auto cursor-pointer">
+            <span class="text-[9px] uppercase tracking-[0.8em] group-hover:text-primary transition-colors">Listen to the Voice</span>
+            <iconify-icon icon="lucide:chevron-down" class="text-2xl animate-bounce text-primary/60"></iconify-icon>
+          </button>
+        </div>
+      </div>
+      <div id="origin-step-3" class="max-w-4xl text-center space-y-12 hidden opacity-0 transition-all duration-1000">
+        <div class="flex items-center justify-center gap-4 opacity-60">
+          <span class="text-primary text-[10px] uppercase tracking-[1em] font-black">Present Day</span>
+        </div>
+        <h2 class="text-6xl md:text-[10rem] font-heading font-black tracking-tighter uppercase italic text-foreground drop-shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+          HE <span class="text-primary">LIVES</span>
+        </h2>
+        <p class="text-muted-foreground text-lg md:text-2xl font-light tracking-widest leading-relaxed italic max-w-2xl mx-auto">
+          "Jason is my special boy. He's come home. And he's hungry."
+        </p>
+        <div class="pt-16">
+          <button onclick="switchView('arrival')" class="px-20 py-10 bg-primary text-white font-black uppercase tracking-[1em] text-[12px] hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_0_50px_rgba(153,27,27,0.6)] active:scale-95">
+            Enter the Nightmare
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 1: THE ARRIVAL -->
+    <div id="view-arrival" class="h-full w-full overflow-y-auto snap-y snap-mandatory scroll-smooth hidden opacity-0 transition-opacity duration-1000">
+      <section class="h-screen w-full flex flex-col items-center justify-center snap-start relative px-6">
+        <div class="text-center space-y-8 max-w-4xl">
+          <div class="flex items-center justify-center gap-4 mb-2">
+            <span class="h-[1px] w-12 bg-primary/60"></span>
+            <span class="text-primary text-[10px] uppercase tracking-[1em] font-black">Friday June 13th</span>
+            <span class="h-[1px] w-12 bg-primary/60"></span>
+          </div>
+          <h1 class="text-8xl md:text-[10rem] font-heading font-black tracking-tighter leading-none italic uppercase">
+            <span class="block text-foreground drop-shadow-[0_0_40px_rgba(153,27,27,0.5)]">THE</span>
+            <span class="block text-primary -mt-6 md:-mt-12">ARRIVAL</span>
+          </h1>
+          <p class="text-muted-foreground text-sm md:text-xl tracking-[0.4em] font-light max-w-2xl mx-auto leading-relaxed italic">
+            "They came for a summer of fun. They stayed for an eternity of silence."
+          </p>
+          <div class="pt-12 flex flex-col items-center gap-6">
+             <div class="flex gap-4">
+               <div class="w-2 h-2 rounded-full bg-primary animate-ping"></div>
+               <span class="text-[9px] uppercase tracking-[0.6em] text-primary font-bold">5 Victims Identified</span>
+             </div>
+          </div>
+        </div>
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-40">
+          <span class="text-[9px] uppercase tracking-[1em]">Meet the Campers</span>
+          <iconify-icon icon="lucide:chevron-down" class="text-xl"></iconify-icon>
+        </div>
+      </section>
+
+      <section class="min-h-screen w-full py-32 px-6 bg-background/60 snap-start">
+        <div class="max-w-7xl mx-auto space-y-24">
+          <div class="flex flex-col md:flex-row justify-between items-end gap-8 border-b border-primary/20 pb-16">
+            <div class="space-y-4">
+              <h2 class="text-5xl md:text-7xl font-heading font-black tracking-tight uppercase italic text-foreground">The Counselors</h2>
+              <p class="text-muted-foreground tracking-[0.5em] text-[10px] uppercase font-bold">Survival Probability: 0.04%</p>
+            </div>
+          </div>
+
+          <!-- CHARACTER GRID -->
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <!-- Brad -->
+            <div class="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-card/60 backdrop-blur-sm transition-all duration-700 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(153,27,27,0.2)]">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-1000" alt="Brad">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-8 left-8 right-8">
+                <span class="text-[9px] text-primary font-bold uppercase tracking-[0.5em] block mb-1">The Jock</span>
+                <h4 class="text-2xl font-heading font-black tracking-tight uppercase italic">BRAD</h4>
+              </div>
+            </div>
+            <!-- Annie -->
+            <div class="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-card/60 backdrop-blur-sm transition-all duration-700 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(153,27,27,0.2)]">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-1000" alt="Annie">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-8 left-8 right-8">
+                <span class="text-[9px] text-primary font-bold uppercase tracking-[0.5em] block mb-1">The Final Girl</span>
+                <h4 class="text-2xl font-heading font-black tracking-tight uppercase italic">ANNIE</h4>
+              </div>
+            </div>
+            <!-- Ned -->
+            <div class="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-card/60 backdrop-blur-sm transition-all duration-700 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(153,27,27,0.2)]">
+              <img src="https://randomuser.me/api/portraits/men/85.jpg" class="w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-1000" alt="Ned">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-8 left-8 right-8">
+                <span class="text-[9px] text-primary font-bold uppercase tracking-[0.5em] block mb-1">The Prankster</span>
+                <h4 class="text-2xl font-heading font-black tracking-tight uppercase italic">NED</h4>
+              </div>
+            </div>
+            <!-- Marcie -->
+            <div class="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-card/60 backdrop-blur-sm transition-all duration-700 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(153,27,27,0.2)]">
+              <img src="https://randomuser.me/api/portraits/women/67.jpg" class="w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-1000" alt="Marcie">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-8 left-8 right-8">
+                <span class="text-[9px] text-primary font-bold uppercase tracking-[0.5em] block mb-1">The Artist</span>
+                <h4 class="text-2xl font-heading font-black tracking-tight uppercase italic">MARCIE</h4>
+              </div>
+            </div>
+            <!-- Jack -->
+            <div class="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-card/60 backdrop-blur-sm transition-all duration-700 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(153,27,27,0.2)]">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-full h-full object-cover grayscale brightness-[0.3] group-hover:grayscale-0 group-hover:brightness-75 transition-all duration-1000" alt="Jack">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-8 left-8 right-8">
+                <span class="text-[9px] text-primary font-bold uppercase tracking-[0.5em] block mb-1">The Boyfriend</span>
+                <h4 class="text-2xl font-heading font-black tracking-tight uppercase italic">JACK</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- START ACTION -->
+          <div class="flex flex-col items-center justify-center pt-20 pb-48 gap-12">
+            <h3 class="text-4xl font-heading font-black italic uppercase tracking-tighter text-center">Ready to unpack?</h3>
+            <button onclick="switchView('gateway')" class="px-24 py-10 bg-primary text-white font-black uppercase tracking-[1em] text-[12px] hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_0_50px_rgba(153,27,27,0.6)] active:scale-95">
+              Enter Camp Crystal Lake
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- STAGE 2: THE GATEWAY -->
+    <div id="view-gateway" class="h-full w-full overflow-hidden hidden opacity-0 transition-opacity duration-1000">
+      <section class="h-full w-full flex flex-col items-center justify-center relative px-6">
+        <div class="text-center space-y-12 max-w-5xl">
+          <div class="flex items-center justify-center gap-8 mb-6">
+            <div class="h-[1px] w-24 bg-primary/40"></div>
+            <h2 class="text-primary text-xs uppercase tracking-[1.5em] font-black animate-pulse">The Gateway</h2>
+            <div class="h-[1px] w-24 bg-primary/40"></div>
+          </div>
+          <h1 class="text-8xl md:text-[14rem] font-heading font-black tracking-tighter leading-none italic uppercase">
+            <span class="block text-foreground drop-shadow-[0_0_40px_rgba(153,27,27,0.4)]">HE IS</span>
+            <span class="block text-primary -mt-6 md:-mt-16">WATCHING</span>
+          </h1>
+          <p class="text-muted-foreground text-sm md:text-2xl tracking-[0.5em] max-w-3xl mx-auto font-light italic">
+            "They say he died here. But the woods remember."
+          </p>
+          <div class="pt-16">
+            <button onclick="switchView('pursuit')" class="px-16 py-8 border border-primary/60 text-primary hover:bg-primary hover:text-white transition-all duration-700 uppercase tracking-[0.8em] text-[11px] font-black shadow-[0_0_40px_rgba(153,27,27,0.3)]">
+              Accept Your Fate
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- STAGE 3: THE PURSUIT -->
+    <div id="view-pursuit" class="h-full w-full overflow-hidden hidden opacity-0 transition-opacity duration-1000">
+      <section class="h-full w-full flex flex-col items-center justify-center relative px-6">
+        <div class="text-center space-y-12 max-w-6xl">
+          <h2 class="text-primary text-xs uppercase tracking-[2em] font-black mb-6">The Pursuit</h2>
+          <h1 class="text-8xl md:text-[12rem] font-heading font-black tracking-tighter leading-none italic uppercase text-foreground">
+            <span class="block drop-shadow-[0_0_60px_rgba(153,27,27,0.7)]">RUN</span>
+            <span class="block text-primary -mt-6 md:-mt-14">FASTER</span>
+          </h1>
+          <p class="text-muted-foreground text-sm md:text-3xl tracking-[0.3em] font-light max-w-4xl mx-auto leading-relaxed italic">
+            "He's right behind you. Don't look back."
+          </p>
+          <div class="pt-20">
+            <button onclick="switchView('fight')" class="px-16 py-8 bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500 uppercase tracking-[0.8em] text-[11px] font-black shadow-[0_0_50px_rgba(153,27,27,0.5)]">
+              Turn and Fight
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- STAGE 4: THE FIGHT -->
+    <div id="view-fight" class="h-full w-full overflow-hidden hidden opacity-0 transition-opacity duration-1000">
+      <section class="h-full w-full flex flex-col items-center justify-center relative px-6">
+        <!-- Industrial Environment Grids -->
+        <div class="absolute inset-0 pointer-events-none opacity-20 mix-blend-screen">
+          <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent_49%,rgba(255,255,255,0.05)_50%,transparent_51%)] bg-[length:60px_100%]"></div>
+          <div class="absolute inset-0 bg-[linear-gradient(0deg,transparent_49%,rgba(255,255,255,0.05)_50%,transparent_51%)] bg-[length:100%_60px]"></div>
+        </div>
+        
+        <!-- Combat HUD -->
+        <div class="absolute top-16 left-0 right-0 px-16 flex justify-between items-start z-50">
+          <div class="flex flex-col gap-3 w-80">
+            <div class="flex justify-between items-end">
+              <span class="text-[11px] uppercase tracking-[0.5em] font-black text-foreground">COUNSELOR #04</span>
+              <span id="victim-hp-text" class="text-sm font-heading font-bold text-foreground italic">100%</span>
+            </div>
+            <div class="h-1.5 bg-white/10 w-full overflow-hidden rounded-full">
+              <div id="victim-hp-bar" class="h-full bg-white w-full transition-all duration-300"></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3 w-80 text-right">
+            <div class="flex justify-between items-end flex-row-reverse">
+              <span class="text-[11px] uppercase tracking-[0.5em] font-black text-primary">JASON VOORHEES</span>
+              <span id="jason-hp-text" class="text-sm font-heading font-bold text-primary italic">???%</span>
+            </div>
+            <div class="h-1.5 bg-primary/20 w-full overflow-hidden rounded-full">
+              <div id="jason-hp-bar" class="h-full bg-primary w-full transition-all duration-300 shadow-[0_0_20px_rgba(153,27,27,1)]"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="combat-actions" class="text-center space-y-16 z-50">
+          <h1 class="text-7xl md:text-[10rem] font-heading font-black tracking-tighter leading-none italic uppercase text-foreground">
+            FIGHT <span class="text-primary">BACK</span>
+          </h1>
+          <div class="flex flex-wrap justify-center gap-8">
+            <button onclick="combatAction('strike')" class="px-16 py-10 bg-primary text-white font-black uppercase tracking-[0.6em] text-[12px] hover:scale-110 transition-all active:scale-95 shadow-[0_0_60px_rgba(153,27,27,0.8)] cursor-pointer">
+              Brutal Strike
+            </button>
+            <button onclick="combatAction('dodge')" class="px-16 py-10 border border-white/20 text-white font-black uppercase tracking-[0.6em] text-[12px] hover:bg-white hover:text-black transition-all active:scale-95 cursor-pointer">
+              Desperate Dodge
+            </button>
+          </div>
+        </div>
+        
+        <div id="strike-visual" class="absolute inset-0 z-40 bg-white opacity-0 pointer-events-none transition-opacity duration-75"></div>
+      </section>
+    </div>
+
+    <!-- STAGE 5: ELIMINATION -->
+    <div id="view-elimination" class="h-full w-full overflow-hidden hidden bg-black">
+      <section class="h-full w-full flex flex-col items-center justify-center relative px-6">
+        <div id="kill-text" class="text-center space-y-16 z-50 opacity-0 transition-all duration-1500 scale-125">
+          <h1 class="text-8xl md:text-[15rem] font-heading font-black tracking-tighter leading-none italic uppercase text-white drop-shadow-[0_0_80px_rgba(153,27,27,0.9)]">
+            GAME <span class="text-primary">OVER</span>
+          </h1>
+          <p class="text-muted-foreground text-sm tracking-[1em] uppercase italic">The Lake Always Reclaims Its Own</p>
+          <div class="pt-10">
+            <button onclick="switchView('origin')" class="px-16 py-8 bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500 uppercase tracking-[1em] text-[11px] font-black shadow-[0_0_40px_rgba(153,27,27,0.5)]">
+              Restart Nightmare
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    (function() {
+      const root = document.getElementById('horror-master-root');
+      const flashlightToggle = document.getElementById('flashlight-toggle');
+      const flashlightIcon = document.getElementById('flashlight-icon');
+      const flashlightOverlay = document.getElementById('flashlight-overlay');
+      const audioToggle = document.getElementById('audio-toggle');
+      const audioIcon = document.getElementById('audio-icon');
+      const audioPulse = document.getElementById('audio-pulse');
+      const ambientAudio = document.getElementById('horror-ambient');
+      const canvas = document.getElementById('fog-canvas');
+      const ctx = canvas.getContext('2d');
+      const timestampEl = document.getElementById('current-timestamp');
+      
+      const views = {
+        origin: document.getElementById('view-origin'),
+        arrival: document.getElementById('view-arrival'),
+        gateway: document.getElementById('view-gateway'),
+        pursuit: document.getElementById('view-pursuit'),
+        fight: document.getElementById('view-fight'),
+        elimination: document.getElementById('view-elimination')
+      };
+      
+      const backgrounds = {
+        origin: [document.getElementById('bg-origin-1'), document.getElementById('bg-origin-2'), document.getElementById('bg-origin-3')],
+        arrival: document.getElementById('bg-arrival'),
+        gateway: document.getElementById('bg-gateway'),
+        pursuit: document.getElementById('bg-pursuit'),
+        fight: document.getElementById('bg-fight'),
+        elimination: document.getElementById('bg-elimination')
+      };
+      
+      let flashlightActive = false;
+      let audioPlaying = false;
+      let particles = [];
+      let victimHP = 100;
+      let jasonHP = 100;
+      let combatCount = 0;
+
+      // Update Timestamp
+      setInterval(() => {
+        const now = new Date();
+        timestampEl.innerText = `${String(now.getMonth() + 1).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}/${now.getFullYear()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+      }, 1000);
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class FogParticle {
+        constructor() { this.reset(); }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 150 + 80;
+          this.speedX = (Math.random() - 0.5) * 0.2;
+          this.speedY = (Math.random() - 0.5) * 0.08;
+          this.opacity = Math.random() * 0.15;
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < -200 || this.x > canvas.width + 200) this.reset();
+        }
+        draw() {
+          ctx.fillStyle = `rgba(40, 65, 55, ${this.opacity})`;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      for (let i = 0; i < 40; i++) particles.push(new FogParticle());
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      window.nextOriginStep = function(step) {
+        if (!audioPlaying) toggleAudio();
+        
+        const current = document.querySelector('[id^="origin-step-"]:not(.hidden)');
+        const next = document.getElementById(`origin-step-${step}`);
+        
+        current.classList.add('opacity-0');
+        setTimeout(() => {
+          current.classList.add('hidden');
+          next.classList.remove('hidden');
+          setTimeout(() => next.classList.remove('opacity-0'), 50);
+          
+          backgrounds.origin.forEach((bg, idx) => {
+            bg.classList.toggle('opacity-100', idx === step - 1);
+            bg.classList.toggle('opacity-0', idx !== step - 1);
+          });
+        }, 800);
+      }
+
+      window.switchView = function(target) {
+        root.classList.add('animate-glitch-violent');
+        
+        const currentVisible = Object.keys(views).find(key => !views[key].classList.contains('hidden'));
+        if (currentVisible) views[currentVisible].classList.add('opacity-0');
+
+        setTimeout(() => {
+          Object.keys(views).forEach(key => {
+            if (views[key]) {
+              views[key].classList.toggle('hidden', key !== target);
+              if (key === target) {
+                setTimeout(() => views[key].classList.remove('opacity-0'), 50);
+              }
+            }
+            
+            if (key === 'origin') {
+              backgrounds.origin.forEach((bg, idx) => {
+                bg.classList.toggle('opacity-100', target === 'origin' && idx === 0);
+                bg.classList.toggle('opacity-0', target !== 'origin' || idx !== 0);
+              });
+            } else {
+              if (backgrounds[key]) {
+                backgrounds[key].classList.toggle('opacity-100', key === target);
+                backgrounds[key].classList.toggle('opacity-0', key !== target);
+              }
+            }
+          });
+          
+          if (target === 'origin') {
+            document.querySelectorAll('[id^="origin-step-"]').forEach((s, i) => {
+              s.classList.toggle('hidden', i !== 0);
+              s.classList.toggle('opacity-0', i !== 0);
+            });
+          }
+          
+          if (views[target] && views[target].scrollTop !== undefined) views[target].scrollTop = 0;
+          if (target === 'fight') resetCombat();
+          if (target === 'elimination') {
+             setTimeout(() => {
+               const killText = document.getElementById('kill-text');
+               killText.classList.remove('opacity-0', 'scale-125');
+               killText.classList.add('opacity-100', 'scale-100');
+             }, 800);
+          }
+        }, 500);
+        setTimeout(() => root.classList.remove('animate-glitch-violent'), 1000);
+      }
+
+      function resetCombat() {
+        victimHP = 100;
+        jasonHP = 100;
+        combatCount = 0;
+        updateCombatUI();
+      }
+
+      function updateCombatUI() {
+        document.getElementById('victim-hp-bar').style.width = `${victimHP}%`;
+        document.getElementById('victim-hp-text').innerText = `${Math.ceil(victimHP)}%`;
+        document.getElementById('jason-hp-bar').style.width = `${jasonHP}%`;
+        document.getElementById('jason-hp-text').innerText = jasonHP > 95 ? '???%' : `${Math.ceil(jasonHP)}%`;
+      }
+
+      window.combatAction = function(type) {
+        const strikeVisual = document.getElementById('strike-visual');
+        strikeVisual.style.opacity = '1';
+        setTimeout(() => strikeVisual.style.opacity = '0', 80);
+        root.classList.add('animate-glitch-violent');
+        setTimeout(() => root.classList.remove('animate-glitch-violent'), 400);
+        
+        combatCount++;
+        victimHP = Math.max(0, victimHP - (Math.random() * 30 + 20));
+        jasonHP = Math.max(0, jasonHP - (type === 'strike' ? Math.random() * 8 : 0));
+        updateCombatUI();
+        
+        if (victimHP <= 0 || combatCount >= 3) {
+           setTimeout(() => switchView('elimination'), 600);
+        }
+      }
+
+      function updateAudioUI(playing) {
+        if (playing) {
+          audioIcon.setAttribute('icon', 'lucide:volume-x');
+          audioIcon.classList.add('text-primary');
+          audioPulse.classList.add('animate-ping');
+        } else {
+          audioIcon.setAttribute('icon', 'lucide:volume-2');
+          audioIcon.classList.remove('text-primary');
+          audioPulse.classList.remove('animate-ping');
+        }
+      }
+
+      function toggleAudio() {
+        audioPlaying = !audioPlaying;
+        if (audioPlaying) {
+          ambientAudio.play().catch(() => { 
+            audioPlaying = false; 
+            updateAudioUI(false);
+          });
+        } else {
+          ambientAudio.pause();
+        }
+        updateAudioUI(audioPlaying);
+      }
+      audioToggle.addEventListener('click', toggleAudio);
+
+      flashlightToggle.addEventListener('click', () => {
+        flashlightActive = !flashlightActive;
+        flashlightOverlay.style.opacity = flashlightActive ? '1' : '0';
+        flashlightIcon.setAttribute('icon', flashlightActive ? 'lucide:zap-off' : 'lucide:zap');
+        root.classList.toggle('flashlight-mode');
+        root.classList.add('animate-glitch-violent');
+        setTimeout(() => root.classList.remove('animate-glitch-violent'), 300);
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (flashlightActive) {
+          flashlightOverlay.style.setProperty('--x', `${e.clientX}px`);
+          flashlightOverlay.style.setProperty('--y', `${e.clientY}px`);
+        }
+      });
+    })();
+  </script>
+
+  <style>
+    @keyframes glitch-violent {
+      0% { transform: translate(0); filter: brightness(1); }
+      5% { transform: translate(-15px, 10px) skewX(8deg); filter: brightness(2.5) contrast(2) hue-rotate(90deg); }
+      15% { transform: translate(15px, -10px); filter: invert(0.3) saturate(4); }
+      30% { transform: translate(-5px, 5px) skewY(5deg); filter: contrast(1.5); }
+      100% { transform: translate(0); filter: brightness(1); }
+    }
+    .animate-glitch-violent { animation: glitch-violent 0.6s ease-in-out; }
+    .flashlight-mode { cursor: none; }
+    ::-webkit-scrollbar { display: none; }
+    .snap-mandatory { scroll-snap-type: y mandatory; }
+    .snap-start { scroll-snap-align: start; }
+  </style>
+
+</div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
